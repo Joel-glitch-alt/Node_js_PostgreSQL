@@ -7,7 +7,7 @@ metadata:
     app: octo_node
 spec:
   selector:
-    app: example
+    app: octo_node
   ports:
     - protocol: TCP
       port: 80
