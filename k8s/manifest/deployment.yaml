@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: octo_node
+  labels:
+    app: octo_node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: octo_node
+  template:
+    metadata:
+      labels:
+        app: octo_node
+    spec:
+      containers:
+        - name: octo_node
+          image: addition1905/octo_node:v1.0.0
+          ports:
+            - containerPort: 8080
